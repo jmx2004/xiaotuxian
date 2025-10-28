@@ -1,4 +1,4 @@
-<script setup lang="ts">
+<script setup>
 import { useCategoryStore } from '@/stores/category';
 const categoryStore = useCategoryStore()
 
@@ -7,7 +7,7 @@ const categoryStore = useCategoryStore()
 <template>
   <div class="home-category">
     <ul class="menu">
-      <li v-for="item in categoryStore.categoryList as any" :key="item">
+      <li v-for="item in categoryStore.categoryList" :key="item">
         <RouterLink to="/">{{item.name}} </RouterLink>
         <RouterLink v-for="i in item.children.slice(0, 2)" :key="i.id" to="/">{{i.name}}</RouterLink>
         <!-- 弹层layer位置 -->
