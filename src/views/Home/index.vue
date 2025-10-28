@@ -1,4 +1,4 @@
-<!-- <script setup>
+<script setup>
 import HomeCategory from './components/HomeCategory.vue'
 import HomeBanner from './components/HomeBanner.vue'
 import HomeNew from './components/HomeNew.vue'
@@ -14,7 +14,4 @@ import homeProduct from './components/HomeProduct.vue'
   <HomeNew />
   <HomeHot />
   <homeProduct />
-</template> -->
-<template>
-  我是home
 </template>
