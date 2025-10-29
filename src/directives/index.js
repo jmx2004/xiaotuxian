@@ -8,7 +8,7 @@ export const lazyPlugin = {
       mounted (el, binding) {
         // el:指定绑定的那个元素 img
         // binding: bing.value 指令等于号后面绑定的表达式的值 图片ul
-        useIntersectionObserver(
+        const {stop} = useIntersectionObserver(
 
           el,
           ([{ isIntersecting }]) => {
@@ -16,6 +16,7 @@ export const lazyPlugin = {
                 if (isIntersecting) {
                   // 进入视口区域
                   el.src = binding.value
+                  stop()
                 }
           }
         )
